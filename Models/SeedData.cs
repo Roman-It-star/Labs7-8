@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MvcCreditApp.Data;
+using MvcCreditApp1.Data;
 
-namespace MvcCreditApp.Models
+namespace MvcCreditApp1.Models
 {
     public class SeedData
     {

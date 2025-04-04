@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace MvcCreditApp.Data;
+namespace MvcCreditApp1.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {

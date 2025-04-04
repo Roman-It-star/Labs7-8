@@ -1,4 +1,4 @@
-namespace MvcCreditApp.Models
+namespace MvcCreditApp1.Models
 {
     public class ErrorViewModel
     {

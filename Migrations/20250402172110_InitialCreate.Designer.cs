@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MvcCreditApp.Models;
+using MvcCreditApp1.Models;
 
 #nullable disable
 
-namespace MvcCreditApp.Migrations
+namespace MvcCreditApp1.Migrations
 {
     [DbContext(typeof(CreditContext))]
     [Migration("20250402172110_InitialCreate")]

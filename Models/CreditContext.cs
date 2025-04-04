@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace MvcCreditApp.Models
+namespace MvcCreditApp1.Models
 {
     public class CreditContext : DbContext
     {

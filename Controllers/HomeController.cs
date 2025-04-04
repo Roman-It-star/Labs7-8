@@ -1,6 +1,7 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MvcCreditApp.Models;
+using MvcCreditApp1.Models;
 
 namespace MvcCreditApp.Controllers;
 
@@ -31,6 +32,7 @@ public class HomeController : Controller
         ViewBag.Credits = allCredits;
     }
 
+    [Authorize]
     [HttpGet]
     public ActionResult CreateBid()
     {
@@ -59,5 +61,16 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    public ActionResult BidSearch(string name)
+    {
+        var allBids = db.Bids.Where(a => a.CreditHead.Contains(name)).ToList();
+        if (allBids.Count == 0)
+        {
+            return Content("”казанный кредит " + name + " не найден");
+            //return HttpNotFound();
+        }
+        return PartialView(allBids);
     }
 }

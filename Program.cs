@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using MvcCreditApp.Data;
-using MvcCreditApp.Models;
+using MvcCreditApp1.Data;
+using MvcCreditApp1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +19,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<CreditContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CreditContext") ??
     throw new InvalidOperationException("Connection string 'CreditContext' not found.")));
+
+builder.Services.AddOutputCache();
 
 var app = builder.Build();
 
@@ -42,6 +44,8 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseOutputCache();
 
 app.UseRouting();
 

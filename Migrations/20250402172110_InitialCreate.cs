@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MvcCreditApp.Migrations
+namespace MvcCreditApp1.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

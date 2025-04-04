@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace MvcCreditApp.Data.Migrations
+namespace MvcCreditApp1.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
